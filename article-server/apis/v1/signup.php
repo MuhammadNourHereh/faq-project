@@ -1,7 +1,8 @@
 <?php
 require_once getPath("conn");
 require_once getPath("cors-headers");
-require_once getPath("userSkelton");
+require_once getPath("UserSkeleton");
+require_once getPath("User");
 
 // get parms
 $email = $_POST["email"];
@@ -21,4 +22,16 @@ if (empty($email) || empty($password) || empty($firstname) || empty($lastname)) 
 // create a userSkelton
 $userSkeleton = new UserSkeleton($email, $password, $firstname, $lastname);
 
-// TODO add user
+$respose = User::addUser($userSkeleton);
+
+if (!$respose) {
+    http_response_code(400);
+    echo json_encode([
+        "message" => "failed to create user"
+    ]);
+    exit();
+}
+
+http_response_code(200);
+echo json_encode($respose);
+exit();

@@ -1,6 +1,6 @@
 <?php
 require_once getPath("conn");
-
+require_once getPath("UserSkeleton");
 
 class User
 {
@@ -10,7 +10,7 @@ class User
      * @param UserSkeleton $user User object containing email, password, first_name, last_name
      * @return UserSkeleton|false Returns updated user object on success, false on failure
      */
-    public function addUser(UserSkeleton $user): UserSkeleton|false
+    public static function addUser(UserSkeleton $user): UserSkeleton|false
     {
         global $conn;
 
@@ -45,7 +45,7 @@ class User
      * @param string $email User's email to search for
      * @return UserSkeleton|null Returns user object or null if not found
      */
-    public function getUser(string $email): ?UserSkeleton
+    public static function getUser(string $email): ?UserSkeleton
     {
         global $conn;
 
