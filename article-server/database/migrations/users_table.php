@@ -1,6 +1,5 @@
 <?php
-require_once "../../utils/paths.php";
-require_once path("conn");
+require_once getPath("conn");
 
 // creates the table
 mysqli_query($conn, "CREATE TABLE IF NOT EXISTS users (
@@ -9,3 +8,5 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS users (
     last_name VARCHAR(225) NOT NULL,
     password_hash VARCHAR(225) NOT NULL
 )");
+
+echo "users table was created successfully\n";
