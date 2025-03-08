@@ -10,7 +10,7 @@ function getPath($file)
         "signup" => $base . "/connection/user/v1/apis/signup.php",
         "login" => $base . "/connection/user/v1/apis/login.php",
         "UserSkeleton" => $base . "/models/UserSkelteton.php",
-        "User" => $base . "/models/User.php"
+        "User" => $base . "/models/User.php",
     ];
 
     if (!isset($paths[$file])) {
