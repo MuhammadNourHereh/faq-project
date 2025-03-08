@@ -58,36 +58,7 @@ class Quest
 
         return $faqs;
     }
-
-    /**
-     * Get a single FAQ by ID
-     * 
-     * @param int $id The ID of the FAQ
-     * @return FaqSkeleton|null Returns FaqSkeleton object if found, null otherwise
-     */
-    public static function getFaqById(int $id): ?FaqSkeleton
-    {
-        global $conn;
-
-        $query = "SELECT * FROM faqs WHERE id = ?";
-        $stmt = $conn->prepare($query);
-
-        if (!$stmt) {
-            return null;
-        }
-
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($row = $result->fetch_assoc()) {
-            $stmt->close();
-            return new FaqSkeleton($row['id'], $row['quest'], $row['ans']);
-        }
-
-        return null;
-    }
-
+    
     /**
      * Delete an FAQ by ID
      * 
