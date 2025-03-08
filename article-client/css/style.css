@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start {
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: start;
+}
+.form {
+    height: 100vh;
+    width: 100vw;
+    flex-direction:column;
+    background-color: lightslategray;
+}
+.form-item {
+    margin: 5px;
+}
+input {
+    margin: 5px;
+    width: 40vw;
+}
+
+button {
+    padding: .2em;
+    margin: 5px;
+    border: 2px black 77px;
+}
+
+p {
+    margin: 5px;
+    font-size: .85em;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registraion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form id="loginForm">
+        <div class="center form">
+            <div class="start">
+                <input type="email" id="email" name="email" placeholder="a@exmple.com" required>
+                <input type="text" id="firstname-input" name="firstname" placeholder="firstname" required>
+                <input type="text" id="lastname-input" name="lastname" placeholder="lastname" required>
+                <input type="password" id="password-input" name="password" placeholder="Password" required>
+                <input type="password" id="repassword-input" name="repassword" placeholder="Rewrite Password"
+                    required>
+                <button type="submit">Sign up</button>
+                <p>already have an account? <a href="index.html">login</a></p>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+    <script type="module" src="scripts/register.js"></script>
+</body>
+
+</html>
