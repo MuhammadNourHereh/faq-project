@@ -1,4 +1,4 @@
-import baseUrl from './utils.js'
+import { baseUrl } from './utils.js'
 
 if (localStorage.getItem('user') != null)
     window.location.href = "home.html"
