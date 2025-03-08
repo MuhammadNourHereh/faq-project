@@ -12,7 +12,7 @@ $lastname = $_POST["lastname"];
 
 // check for parms
 if (empty($email) || empty($password) || empty($firstname) || empty($lastname)) {
-    http_response_code(400);
+    http_response_code(401);
     echo json_encode([
         "message" => "all parms are required"
     ]);

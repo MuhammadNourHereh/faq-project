@@ -10,7 +10,7 @@ $password = $_POST["password"];
 
 // check for parms
 if (empty($email) || empty($password)) {
-    http_response_code(400);
+    http_response_code(401);
     echo json_encode([
         "message" => "all parms are required"
     ]);
@@ -20,7 +20,7 @@ if (empty($email) || empty($password)) {
 $respose = User::getUser($email, $password);
 
 if (!$respose) {
-    http_response_code(400);
+    http_response_code(404);
     echo json_encode([
         "message" => "user not found"
     ]);
