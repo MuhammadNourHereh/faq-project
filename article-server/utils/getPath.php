@@ -11,6 +11,8 @@ function getPath($file)
         "login" => $base . "/connection/user/v1/apis/login.php",
         "UserSkeleton" => $base . "/models/UserSkelteton.php",
         "User" => $base . "/models/User.php",
+        "FaqSkeleton" => $base . "/models/FaqSkelteton.php",
+        "Faq" => $base . "/models/Faq.php",
     ];
 
     if (!isset($paths[$file])) {
