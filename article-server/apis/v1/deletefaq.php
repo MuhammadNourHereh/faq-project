@@ -14,7 +14,7 @@ if (!$id || !is_numeric($id)) {
 }
 
 // Attempt to delete the FAQ
-$success = Quest::deleteFaq((int)$id);
+$success = Faq::deleteFaq((int)$id);
 
 if (!$success) {
     http_response_code(404);

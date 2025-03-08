@@ -20,7 +20,7 @@ if (empty($quest) || empty($ans)) {
 // Create a FaqSkeleton object
 $faqSkeleton = new FaqSkeleton(0, $quest, $ans); // ID is 0 since it will be auto-generated
 
-$response = Quest::addFaq($faqSkeleton);
+$response = Faq::addFaq($faqSkeleton);
 
 if (!$response) {
     http_response_code(400);

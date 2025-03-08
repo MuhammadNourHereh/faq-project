@@ -2,7 +2,7 @@
 require_once getPath("conn");
 require_once getPath("FaqSkeleton");
 
-class Quest
+class Faq
 {
     /**
      * Add a new FAQ to the database
