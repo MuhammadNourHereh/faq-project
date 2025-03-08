@@ -40,12 +40,13 @@ class User
     }
 
     /**
-     * Get user from database by email
+     * Get user from database by email and verify password
      *
      * @param string $email User's email to search for
-     * @return UserSkeleton|null Returns user object or null if not found
+     * @param string $password Password to verify
+     * @return UserSkeleton|null Returns user object if found and password matches, null otherwise
      */
-    public static function getUser(string $email): ?UserSkeleton
+    public static function getUser(string $email, string $password): ?UserSkeleton
     {
         global $conn;
 
@@ -63,16 +64,17 @@ class User
         if ($row = $result->fetch_assoc()) {
             $stmt->close();
 
-            // Create and return a new UserSkeleton object
-            return new UserSkeleton(
-                $row['email'],
-                $row['password'],
-                $row['first_name'],
-                $row['last_name']
-            );
+            // Verify the password
+            if (password_verify($password, $row['password'])) {
+                return new UserSkeleton(
+                    $row['email'],
+                    $row['password'],
+                    $row['first_name'],
+                    $row['last_name']
+                );
+            }
         }
 
-        $stmt->close();
         return null;
     }
 }
