@@ -1,3 +1,5 @@
+import baseUrl from './utils.js'
+
 const userString = localStorage.getItem('user')
 if (userString === null) {
     window.location.href = "login.html"

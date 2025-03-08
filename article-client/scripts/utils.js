@@ -1,3 +1,4 @@
+export const baseUrl = 'http://localhost:3000/article-server/'
 export const passwordVarify = pass => {
     if (pass.length < 3 || pass.length > 20)
         return false

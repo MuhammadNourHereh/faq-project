@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/'
+import baseUrl from './utils.js'
 
 if (localStorage.getItem('user') != null)
     window.location.href = "home.html"
@@ -13,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
             // getting data
             const data = response.data
             const { email, first_name, last_name } = data
-            
+
             // store cookie
             localStorage.setItem("user", JSON.stringify({ email, first_name, last_name }))
 

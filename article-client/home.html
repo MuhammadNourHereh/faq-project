@@ -4,14 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
 
-<body>
-    <h1>faq project</h1>
-    <p>Welcome <em id="firstname"></em> <em id="lastname"></em></p>
-    <button id="logout">logout</button>
+<body class="background">
+    <header>
+        <div>
+            <h1>faq project</h1>
+            <p>Welcome <em id="firstname"></em> <em id="lastname"></em></p>
+            <button id="logout">logout</button>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="faq-cards-section">
+            <div class="faq-card">
+                <div class="quest-div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel unde nemo, illum
+                    tenetur, eveniet blanditiis odit omnis corporis delectus cum esse assumenda? Culpa ratione
+                    necessitatibus numquam, iure nemo quas aliquam?</div>
+                <div class="ans-div">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem, nihil
+                    nostrum id quisquam aperiam iste repudiandae dignissimos consequuntur accusamus labore similique
+                    iure obcaecati at itaque cupiditate omnis, qui rerum.</div>
+                    <button>delete</button>
+            </div>
+            <div class="faq-card">
+                <div class="quest-div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel unde nemo, illum
+                    tenetur, eveniet blanditiis odit omnis corporis delectus cum esse assumenda? Culpa ratione
+                    necessitatibus numquam, iure nemo quas aliquam?</div>
+                <div class="ans-div">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem, nihil
+                    nostrum id quisquam aperiam iste repudiandae dignissimos consequuntur accusamus labore similique
+                    iure obcaecati at itaque cupiditate omnis, qui rerum.</div>
+            </div>
+            <div class="faq-card">
+                <div class="quest-div">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel unde nemo, illum
+                    tenetur, eveniet blanditiis odit omnis corporis delectus cum esse assumenda? Culpa ratione
+                    necessitatibus numquam, iure nemo quas aliquam?</div>
+                <div class="ans-div">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quidem, nihil
+                    nostrum id quisquam aperiam iste repudiandae dignissimos consequuntur accusamus labore similique
+                    iure obcaecati at itaque cupiditate omnis, qui rerum.</div>
+            </div>
+            <div class="faq-card">
+                <div class="quest-div">a</div>
+                <div class="ans-div">b</div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <form class="start">
+                <label>post a question</label>
+                <textarea placeholder="why sky is blue?"></textarea>
+                <button>post</button>
+            </form>
+        </section>
+    </main>
 </body>
+
+
+<template id="faq-template">
+    <div class="faq-card">
+        <div class="quest-div"></div>
+        <div class="ans-div"></div>
+    </div>
+</template>
+
+
+
 <script src="scripts/home.js"></script>
 
 </html>

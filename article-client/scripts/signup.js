@@ -1,6 +1,4 @@
-import { passwordVarify } from './utils.js'
-
-const baseUrl = 'http://localhost:3000/'
+import { passwordVarify, baseUrl } from './utils.js'
 
 // redirect if you signed in
 if (localStorage.getItem('user') != null)
