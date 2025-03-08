@@ -7,8 +7,9 @@ function getPath($file)
     $paths = [
         "conn" => $base . "/connection/conn.php",
         "cors-headers" => $base . "/utils/cors-headers.php",
-        "register" => $base . "/connection/user/v1/apis/register.php",
+        "signup" => $base . "/connection/user/v1/apis/signup.php",
         "login" => $base . "/connection/user/v1/apis/login.php",
+        "userSkeleton" => $base . "/models/UserSkelteton.php"
     ];
 
     if (!isset($paths[$file])) {
