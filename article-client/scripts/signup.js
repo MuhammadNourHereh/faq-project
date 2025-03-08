@@ -2,6 +2,10 @@ import { passwordVarify } from './utils.js'
 
 const baseUrl = 'http://localhost:3000/'
 
+// redirect if you signed in
+if (localStorage.getItem('user') != null)
+    window.location.href = "home.html"
+
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
     const form = new FormData(this)
@@ -20,7 +24,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         form
     )
         .then(() => {
-            window.location.href = "home.html"
+            window.location.href = "index.html"
         })
         .catch(error => {
             console.error("Error logging in:", error)

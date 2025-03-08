@@ -12,10 +12,10 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         .then(response => {
             // getting data
             const data = response.data
-            const { email, firs_tname, last_name } = data
+            const { email, first_name, last_name } = data
             
             // store cookie
-            localStorage.setItem("user", JSON.stringify({ email, firs_tname, last_name }))
+            localStorage.setItem("user", JSON.stringify({ email, first_name, last_name }))
 
             console.log(data)
             window.location.href = "home.html"
